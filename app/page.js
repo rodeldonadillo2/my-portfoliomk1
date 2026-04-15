@@ -13,7 +13,9 @@ export default function Home() {
       },
       { threshold: 0.1 }
     );
+
     document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
     return () => observer.disconnect();
   }, []);
 
@@ -22,7 +24,7 @@ export default function Home() {
       {/* NAVBAR */}
       <nav className="navbar">
         <div className="navbar-logo">
-          <span>R</span><span>D</span>
+          <img src="/logo.png" alt="Rodel Donadillo logo" className="navbar-logo-image" />
         </div>
         <ul className="navbar-links">
           <li><a href="#about">About</a></li>
@@ -46,26 +48,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* CENTER AVATAR */}
+        {/* CENTER NAME ONLY */}
         <div className="hero-center">
-          <div className="hero-avatar">
-            <svg viewBox="0 0 120 120" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="60" cy="45" r="22" fill="#222" stroke="#333" strokeWidth="1"/>
-              <path d="M20 110 Q20 80 60 80 Q100 80 100 110" fill="#222" stroke="#333" strokeWidth="1"/>
-              <line x1="60" y1="0" x2="60" y2="120" stroke="#333" strokeWidth="1"/>
-              <text x="30" y="50" fill="#f97316" fontFamily="sans-serif" fontSize="14" fontWeight="bold">C</text>
-              <text x="72" y="50" fill="#3b82f6" fontFamily="sans-serif" fontSize="14" fontWeight="bold">A</text>
-            </svg>
-          </div>
           <span className="hero-name">Rodel Donadillo</span>
         </div>
 
         {/* RIGHT - AUTOMATOR */}
         <div className="hero-side hero-right">
           <div className="hero-content">
-            <h1 className="hero-title">
-              <span className="hero-chevron">&lt;</span>automator<span className="hero-chevron">&gt;</span>
-            </h1>
+            <h1 className="hero-title">automator</h1>
             <p className="hero-desc">
               Systems builder who automates workflows and scales businesses.
             </p>
@@ -119,8 +110,8 @@ export default function Home() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" style={{background: '#0d0d0d', maxWidth: '100%', padding: '6rem 4rem'}}>
-        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
+      <section id="skills" style={{ background: '#0d0d0d', maxWidth: '100%', padding: '6rem 4rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div className="fade-in">
             <p className="section-label">02 — Skills</p>
             <h2 className="section-title">What I bring<br /><span>to the table</span></h2>
@@ -196,8 +187,8 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" style={{background: '#0d0d0d', maxWidth: '100%', padding: '6rem 4rem'}}>
-        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
+      <section id="contact" style={{ background: '#0d0d0d', maxWidth: '100%', padding: '6rem 4rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div className="fade-in">
             <p className="section-label">04 — Contact</p>
             <h2 className="section-title">Let&apos;s build<br /><span>something together</span></h2>
@@ -238,10 +229,10 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="footer">
         <div className="footer-logo">
-          <span>R</span><span>D</span>
+          <img src="/logo.png" alt="Rodel Donadillo logo" className="footer-logo-image" />
         </div>
         <span>© 2025 Rodel Donadillo. All rights reserved.</span>
-        <span style={{color: 'var(--muted)'}}>Built with Next.js + Vercel</span>
+        <span style={{ color: 'var(--muted)' }}>Built with Next.js + Vercel</span>
       </footer>
     </>
   );
